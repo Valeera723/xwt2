@@ -1,0 +1,8 @@
+{
+  "name": "PitchPerfect AI",
+  "description": "A professional vocal training and pitch analysis application featuring AI mentors and real-time feedback.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

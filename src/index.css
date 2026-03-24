@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #79564e;
+  --color-on-primary: #fff6f4;
+  --color-primary-container: #ffdad3;
+  --color-on-primary-container: #6b4942;
+  
+  --color-secondary: #566254;
+  --color-on-secondary: #effdeb;
+  --color-secondary-container: #d9e6d5;
+  --color-on-secondary-container: #495548;
+  
+  --color-tertiary: #4f626b;
+  --color-on-tertiary: #f2faff;
+  --color-tertiary-container: #dff4ff;
+  --color-on-tertiary-container: #4a5d66;
+  
+  --color-background: #fff8f1;
+  --color-on-background: #363227;
+  
+  --color-surface: #fff8f1;
+  --color-on-surface: #363227;
+  --color-surface-variant: #eae2d2;
+  --color-on-surface-variant: #645e52;
+  
+  --color-outline: #807a6d;
+  --color-outline-variant: #b9b1a3;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 248, 241, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(185, 177, 163, 0.15);
+}
+
+.organic-grain {
+  position: relative;
+}
+
+.organic-grain::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
